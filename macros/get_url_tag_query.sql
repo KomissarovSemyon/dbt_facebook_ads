@@ -9,7 +9,7 @@
       select
           _fivetran_id,
           creative_id,
-          json_extract_array(replace(trim(url_tags, '"'),'\\','')) as cleaned_url_tags
+          json_extract_array(url_tags) as cleaned_url_tags
       from required_fields
   ), 
 
